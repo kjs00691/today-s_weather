@@ -72,7 +72,6 @@ kakao.maps.event.addListener(markerDG, "click", function() {
   handleSubmit(new Event("submit"), "대구광역시");
 });
 
-// 추가적인 마커들에 대해서도 유사하게 추가
 var markerIC = new kakao.maps.Marker({
   position: new kakao.maps.LatLng(37.4532333333333, 126.707352777777),
   map: map

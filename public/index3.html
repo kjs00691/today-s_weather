@@ -37,14 +37,16 @@
                 <div id="selected-city"></div>
                 <div id="temperature"><span id="T1H"></span>℃</div>
                 <div>강수량: <span id="RN1"></span></div>
-              습도: <span id="REH"></span>%
-              풍속: <span id="WSD"></span>m/s
+                습도: <span id="REH"></span>% 풍속: <span id="WSD"></span>m/s
               </div>
             </div>
           </div>
         </div>
         <div id="right">
-          <div id="map" style="width: 500px; height: 500px; margin: auto 5rem;"></div>
+          <div
+            id="map"
+            style="width: 500px; height: 500px; margin: auto 5rem"
+          ></div>
 
           <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9f92c5ea51ec876264a9a7b504ebbbd6"></script>
           <script>
@@ -58,90 +60,7 @@
             // 지도를 생성한다
             var map = new kakao.maps.Map(mapContainer, mapOption);
 
-            var markerSU = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.5635694444444, 126.980008333333), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerBS = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.1770194444444,129.076952777777), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerDG = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.8685416666666,128.603552777777), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerIC = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.4532333333333,126.707352777777), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerGJ = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.1569749999999,126.853363888888), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerDJ = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.3471194444444,127.386566666666), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerUS = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.5354083333333,129.313688888888), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerSJ = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.4800121,127.2890691), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerGG = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.2718444444444,127.011688888888), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerCCN = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.6325,127.493586111111), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-
-            var markerCCS = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.65919, 126.6730), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    }); 
-            
-            var markerJLN = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.817275,127.111052777777), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-            
-            var markerJLS = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.8130444444444,126.465), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-            
-            var markerGSN = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.5759985118295,128.505832256098), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-            
-            var markerGSS = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.2347361111111,128.694166666666), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-            
-            var markerJJ = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(33.4856944444444,126.500333333333), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
-            
-            var markerGW = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.8826916666666,127.731975), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		    });
+              
           </script>
         </div>
       </div>
