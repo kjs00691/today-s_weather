@@ -1,0 +1,51 @@
+#container{
+    height: 100vh;
+    padding: 5rem;
+  }
+  
+  #header{
+    text-align:center;
+    height:15%;
+  }
+  
+  #content{
+    text-align:center;
+    height:75%;
+    padding: auto;
+  }
+  
+  #partition {
+    width: 13rem;
+    display: inline-block; 
+  }
+  #left{
+    float:left;
+    height:100%;
+    width:50%;
+    text-align:center;
+  }
+  #right{
+    float: left;
+    height:100%;
+    width:50%;
+    font-size:2rem;
+  }
+  #top{
+    height:95%;
+  }
+  #bottom{
+    height:5%;
+  }
+  #footer{
+    height:10%;
+    text-align:center;
+    margin:2rem 
+  }
+  
+  
+  #temperature{
+    font-size: 5rem;
+  }
+  #selected-city{
+    font-size: 2rem;
+  }
