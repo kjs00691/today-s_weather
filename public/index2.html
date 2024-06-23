@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
+    <title>6시간 이후 날씨</title>
     <link rel="stylesheet" href="css/style.css" />
     <meta name="description" content="" />
 
@@ -34,55 +34,73 @@
         <div id="partition"  class="card text-bg-secondary">
           <div id="skyimg1"></div>
           <div class="card-body">
-            <p class="card-text" id="temperature1">
+            <div class="card-text">
               <h2><span id="T1H1"></span>℃</h2>
               <div id="fcsttime1"></div>
-            </p>
+              <div>강수량: <span id="RN11"></span></div>
+              습도: <span id="REH1"></span>%
+              풍속: <span id="WSD1"></span>m/s
+            </div>
           </div>
         </div>
         <div id="partition" class="card text-bg-light">
           <div id="skyimg2"></div>
           <div class="card-body">
-            <p class="card-text" id="temperature1">
+            <div class="card-text">
               <h2><span id="T1H2"></span>℃</h2>
               <div id="fcsttime2"></div>
-            </p>
+              <div>강수량: <span id="RN12"></span></div>
+              습도: <span id="REH2"></span>%
+              풍속: <span id="WSD2"></span>m/s
+            </div>
           </div>
         </div>
         <div id="partition" class="card text-bg-secondary">
           <div id="skyimg3"></div>
           <div class="card-body">
-            <p class="card-text" id="temperature1">
+            <div class="card-text">
               <h2><span id="T1H3"></span>℃</h2>
               <div id="fcsttime3"></div>
-            </p>
+              <div>강수량: <span id="RN13"></span></div>
+              습도: <span id="REH3"></span>%
+              풍속: <span id="WSD3"></span>m/s
+            </div>
           </div>
         </div>
         <div id="partition" class="card text-bg-light">
           <div id="skyimg4"></div>
           <div class="card-body">
-            <p class="card-text" id="temperature1">
+            <div class="card-text">
               <h2><span id="T1H4"></span>℃</h2>
               <div id="fcsttime4"></div>
-            </p>
+              <div>강수량: <span id="RN14"></span></div>
+              습도: <span id="REH4"></span>%
+              풍속: <span id="WSD4"></span>m/s
+            </div>
           </div>
         </div>
         <div id="partition" class="card text-bg-secondary">
           <div id="skyimg5"></div>
           <div class="card-body">
-            <p class="card-text" id="temperature1">
+            <div class="card-text">
               <h2><span id="T1H5"></span>℃</h2>
               <div id="fcsttime5"></div>
-            </p>
+              <div>강수량: <span id="RN15"></span></div>
+              습도: <span id="REH5"></span>%
+              풍속: <span id="WSD5"></span>m/s
+            </div>
           </div>
         </div>
         <div id="partition" class="card text-bg-light">
           <div id="skyimg6"></div>
           <div class="card-body">
-            <p class="card-text" id="temperature1">
+            <div class="card-text">
               <h2><span id="T1H6"></span>℃</h2>
               <div id="fcsttime6"></div>
-            </p>
+              <div>강수량: <span id="RN16"></span></div>
+              습도: <span id="REH6"></span>%
+              풍속: <span id="WSD6"></span>m/s
+            </div>
           </div>
         </div>
 
@@ -114,7 +132,6 @@
                 <option value="경상북도">경상북도</option>
                 <option value="경상남도">경상남도</option>
                 <option value="제주특별자치도">제주특별자치도</option>
-                <option value="이어도">이어도</option>
                 <option value="강원특별자치도">강원특별자치도</option>
             </select>
             <button class="btn btn-outline-secondary" type="submit">지역</button>
@@ -142,6 +159,14 @@
           role="button"
           aria-disabled="true"
           >6시간 이후 날씨</a
+        >
+        <a
+          href="index3.html"
+          class="btn btn-primary"
+          tabindex="-1"
+          role="button"
+          aria-disabled="true"
+          >지도로 보기</a
         >
       </div>
       

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>지도로 보기</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1 class="display-1">날씨</h1>
+      </div>
+      <div id="content">
+        <div id="left">
+          <div
+            class="card text-bg-light"
+            style="width: 400px; margin: 1rem auto"
+          >
+            <div id="skyimg"></div>
+            <div class="card-body">
+              <div class="card-text">
+                <div id="selected-city"></div>
+                <div id="temperature"><span id="T1H"></span>℃</div>
+                <div>강수량: <span id="RN1"></span></div>
+              습도: <span id="REH"></span>%
+              풍속: <span id="WSD"></span>m/s
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="right">
+          <div id="map" style="width: 500px; height: 500px; margin: auto 5rem;"></div>
+
+          <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9f92c5ea51ec876264a9a7b504ebbbd6"></script>
+          <script>
+            var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+              mapOption = {
+                center: new kakao.maps.LatLng(36.36188, 127.47741), // 지도의 중심좌표
+                level: 13, // 지도의 확대 레벨
+                mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
+              };
+
+            // 지도를 생성한다
+            var map = new kakao.maps.Map(mapContainer, mapOption);
+
+            var markerSU = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(37.5635694444444, 126.980008333333), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerBS = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.1770194444444,129.076952777777), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerDG = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.8685416666666,128.603552777777), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerIC = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(37.4532333333333,126.707352777777), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerGJ = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.1569749999999,126.853363888888), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerDJ = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.3471194444444,127.386566666666), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerUS = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.5354083333333,129.313688888888), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerSJ = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.4800121,127.2890691), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerGG = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(37.2718444444444,127.011688888888), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerCCN = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.6325,127.493586111111), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+
+            var markerCCS = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.65919, 126.6730), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    }); 
+            
+            var markerJLN = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.817275,127.111052777777), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+            
+            var markerJLS = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.8130444444444,126.465), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+            
+            var markerGSN = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.5759985118295,128.505832256098), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+            
+            var markerGSS = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.2347361111111,128.694166666666), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+            
+            var markerJJ = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(33.4856944444444,126.500333333333), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+            
+            var markerGW = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(37.8826916666666,127.731975), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		    });
+          </script>
+        </div>
+      </div>
+
+      <div id="footer">
+        <a
+          href="index.html"
+          class="btn btn-primary"
+          tabindex="-1"
+          role="button"
+          aria-disabled="true"
+          >현재 날씨</a
+        >
+        <a
+          href="index2.html"
+          class="btn btn-secondary"
+          tabindex="-1"
+          role="button"
+          aria-disabled="true"
+          >6시간 이후 날씨</a
+        >
+        <a
+          href="#"
+          class="btn btn-primary"
+          tabindex="-1"
+          role="button"
+          aria-disabled="true"
+          >지도로 보기</a
+        >
+      </div>
+    </div>
+    <script type="module" src="js/weather3.js"></script>
+  </body>
+</html>
